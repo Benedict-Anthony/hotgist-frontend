@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from './Header';
 import Head from 'next/head';
+import Footer from './Footer';
 
 
 type LayoutProps = {
@@ -21,6 +22,7 @@ const Layout = ({ children }: LayoutProps) => {
                 <Header />
 
                 {children}
+                <Footer />
             </main>
         </>
     )
