@@ -1,6 +1,13 @@
+
+import Layout from '@/Layouts/Layout'
 import '@/styles/globals.css'
+// import '@/styles/Home.css'
 import type { AppProps } from 'next/app'
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  )
 }

@@ -1,0 +1,1 @@
+export const baseUrl = "https://hotgiostblogbackend.onrender.com/api/"
