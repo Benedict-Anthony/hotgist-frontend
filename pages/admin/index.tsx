@@ -7,9 +7,9 @@ import { useRouter } from 'next/router';
 
 
 const Index = () => {
-    const token = JSON.parse(localStorage.getItem("token") as any)
     const router = useRouter()
     const fetcher = async () => {
+        const token = JSON.parse(localStorage.getItem("token") as any)
         const response = await axios({
             method: "get",
             url: `${baseUrl}posts/admin/`,
@@ -31,6 +31,7 @@ const Index = () => {
 
 
     async function handleDelete(id: number) {
+        const token = JSON.parse(localStorage.getItem("token") as any)
 
         const response = await axios({
             method: "delete",
@@ -49,6 +50,8 @@ const Index = () => {
 
 
     async function handlePublish(id: number) {
+        const token = JSON.parse(localStorage.getItem("token") as any)
+
         const response = await axios({
             method: "patch",
             url: `${baseUrl}posts/mutate/${id}/`,

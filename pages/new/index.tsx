@@ -21,10 +21,10 @@ const Index = () => {
   const [error, setError] = useState<string | null>(null)
   const [files, setFiles] = useState<any>([])
 
-  const token = JSON.parse(localStorage.getItem("token") as any)
-  const user: any = jwtDecode(token.access)
 
   const sendPost = async (post: post) => {
+    const token = JSON.parse(localStorage.getItem("token") as any)
+    const user: any = jwtDecode(token.access)
     if (!files) {
       setError("selct an image for your post")
       return;
