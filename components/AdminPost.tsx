@@ -21,16 +21,16 @@ const AdminPost = ({ post, handleDelete, handlePublish }: adminPostTypes) => {
                 <p className="text-xl">{post.excerpt}
                 </p>
             </div>
-            <div className="mt-5 grid grid-cols-2 gap-2 md:flex  justify-between items-center w-full">
+            <div className="mt-5 grid grid-cols-2 gap-2 justify-between items-center w-full">
                 <Button action='View'>
-                    <Link href={`/trending/detail/${post.slug}/`} className='border-0'>view</Link>
+                    <Link href={`/admin/${post.id}/`} className='border-0'>view</Link>
                 </Button>
                 <Button action='Edit' >
-                    <Link href={`/new/${post.slug}/`} className='border-0'>Edit</Link>
+                    <Link href={`/new/${post.id}/`} className='border-0'>Edit</Link>
                 </Button>
-                {post.is_published !== true && <Button action='Publish' handlerClick={handlePublish}>Publ</Button>}
+                {post.is_published !== true && <Button action='Publish' handlerClick={handlePublish}>Publish</Button>}
 
-                <Button action='Delete' handlerClick={handleDelete} >Del</Button>
+                <Button action='Delete' handlerClick={handleDelete} >Delete</Button>
 
             </div>
         </article>

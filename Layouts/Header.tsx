@@ -22,7 +22,7 @@ const Header = () => {
 
 
     return (
-        <header className='w-full flex justify-between align-center border-b-2 mb-10 absolute top-0 '>
+        <header className='w-full flex justify-between align-center border-b-2 mb-10 relative top-0 '>
             <div className="flex align-center justify-center text-red-500 logo">
                 <h1 className="text-xl">Hot Gists </h1>
                 <AiFillFire />

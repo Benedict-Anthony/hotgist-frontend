@@ -2,13 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/* .image {
-    width: 500px;
-} */
-
-/* .image img {
-    width: 100%;
-} */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    transition: all linear 0.2s;
+}
 
 .container {
     max-width: 1200px;
@@ -35,26 +34,39 @@ header nav ul li:hover {
 }
 
 
-.card {
-    /* padding: 10px 12px; */
-
-}
 
 
 .hidden {
     display: flex;
 }
 
+.search {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 20px 0;
+    width: 100%;
+}
 
 .card .img img {
     width: 100px;
 }
+
+/* .w-full {
+    width: 100%;
+} */
 
 .card a {
     /* border: 1px solid #f60f20; */
     font-size: 20px;
     padding: 10px 12px;
 
+}
+
+footer {
+    background-color: #ccc;
+    padding: 0 20px;
+    margin-top: 20px;
 }
 
 @media(max-width:700px) {
